@@ -39,6 +39,7 @@ class MarketController extends Controller
             'name' => $request->name,
             'item_name' => $request->item_name
         ]);
+        return "Store Successful";
     }
 
     /**
@@ -50,6 +51,7 @@ class MarketController extends Controller
     public function show($id)
     {
         return Market::find($id);
+        return "Show Successful";
     }
 
     /**
@@ -76,6 +78,7 @@ class MarketController extends Controller
             'name' => $request->name,
             'item_name' => $request->item_name
         ]);
+        return "Update Successful";
     }
 
     /**
@@ -87,5 +90,6 @@ class MarketController extends Controller
     public function destroy($id)
     {
         Market::find($id)->delete();
+        return "Delete Successful";
     }
 }
